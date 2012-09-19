@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="misd.linkify.class">Misd\Linkify\Linkify</parameter>
+        <parameter key="templating.helper.linkify.class">Misd\LinkifyBundle\Helper\LinkifyHelper</parameter>
+    </parameters>
+
+    <services>
+        <service id="misd.linkify" class="%misd.linkify.class%"/>
+        <service id="templating.helper.linkify" class="%templating.helper.linkify.class%">
+            <tag name="templating.helper" alias="linkify"/>
+            <argument type="service" id="misd.linkify"/>
+        </service>
+        <service id="twig.extension.exercise.twig" class="Misd\LinkifyBundle\Twig\Extension\LinkifyTwigExtension" public="false">
+            <argument type="service" id="templating.helper.linkify"/>
+            <tag name="twig.extension"/>
+        </service>
+    </services>
+</container>
