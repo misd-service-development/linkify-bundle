@@ -27,6 +27,24 @@ Installation
 
         $ php composer.phar update misd/linkify-bundle
 
+ 3. Register the bundle in your application:
+
+        // app/AppKernel.php
+
+        class AppKernel extends Kernel
+        {
+            // ...
+            public function registerBundles()
+            {
+                $bundles = array(
+                    // ...
+                    new Misd\LinkifyBundle\MisdLinkifyBundle(),
+                    // ...
+                );
+            }
+            // ...
+        }
+
 Usage
 -----
 
