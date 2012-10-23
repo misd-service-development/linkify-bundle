@@ -11,6 +11,7 @@
 
 namespace Misd\LinkifyBundle\Twig\Extension;
 
+use Twig_Extension, Twig_Filter_Method;
 use Misd\LinkifyBundle\Helper\LinkifyHelper;
 
 /**
@@ -18,7 +19,7 @@ use Misd\LinkifyBundle\Helper\LinkifyHelper;
  *
  * @author Chris Wilkinson <chris.wilkinson@admin.cam.ac.uk>
  */
-class LinkifyTwigExtension extends \Twig_Extension
+class LinkifyTwigExtension extends Twig_Extension
 {
     /**
      * @var LinkifyHelper
@@ -30,7 +31,7 @@ class LinkifyTwigExtension extends \Twig_Extension
      *
      * @param LinkifyHelper $helper Linkify helper
      */
-    function __construct(LinkifyHelper $helper)
+    public function __construct(LinkifyHelper $helper)
     {
         $this->helper = $helper;
     }
@@ -41,7 +42,7 @@ class LinkifyTwigExtension extends \Twig_Extension
     public function getFilters()
     {
         return array(
-            'linkify' => new \Twig_Filter_Method($this, 'linkify', array(
+            'linkify' => new Twig_Filter_Method($this, 'linkify', array(
                 'pre_escape' => 'html',
                 'is_safe' => array('html')
             )),
@@ -51,8 +52,9 @@ class LinkifyTwigExtension extends \Twig_Extension
     /**
      * Linkify text.
      *
-     * @param string $text Text to process
-     * @return string Processed text
+     * @param string $text Text to process.
+     *
+     * @return string Processed text.
      */
     public function linkify($text)
     {

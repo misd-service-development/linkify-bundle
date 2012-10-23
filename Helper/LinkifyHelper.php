@@ -72,8 +72,9 @@ class LinkifyHelper implements HelperInterface
     /**
      * Process text.
      *
-     * @param string $text Text to process
-     * @return string Processed text
+     * @param string $text Text to process.
+     *
+     * @return string Processed text.
      */
     public function process($text)
     {
