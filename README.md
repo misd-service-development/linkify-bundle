@@ -1,7 +1,7 @@
 LinkifyBundle
 =============
 
-Adds [Linkify](https://github.com/misd-service-development/php-linkify) to your Symfony2 application, which converts URLs and email addresses into HTML links.
+Adds [Linkify](https://github.com/misd-service-development/php-linkify) to your Symfony2 application, which converts URLs and email addresses in HTML (or plain text) to HTML links.
 
 Authors
 -------

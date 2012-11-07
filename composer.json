@@ -17,7 +17,7 @@
     "require":{
         "php":">=5.3.2",
         "symfony/framework-bundle":">=2.0,<2.2-dev",
-        "misd/linkify":"1.0.*"
+        "misd/linkify":"1.1.*"
     },
     "suggest":{
         "symfony/twig-bundle":"to use the Twig linkify filter"
