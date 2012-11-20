@@ -1,6 +1,13 @@
 Changelog
 =========
 
+1.0.2
+-----
+
+20 November 2012.
+
+* Stop conflict which prevents the bundle being used with KnpMarkdownBundle.
+
 1.0.1
 -----
 
