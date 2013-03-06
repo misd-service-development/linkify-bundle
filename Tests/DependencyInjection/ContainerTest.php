@@ -27,11 +27,13 @@ class ContainerTest extends AbstractTestCase
             'Misd\LinkifyBundle\Helper\LinkifyHelper',
             $container->get('templating.helper.linkify')
         );
+        $this->assertTrue($container->getDefinition('templating.helper.linkify')->hasTag('templating.helper'));
 
         $this->assertTrue($container->has('twig.extension.linkify'));
         $this->assertInstanceOf(
             'Misd\LinkifyBundle\Twig\Extension\LinkifyTwigExtension',
             $container->get('twig.extension.linkify')
         );
+        $this->assertTrue($container->getDefinition('twig.extension.linkify')->hasTag('twig.extension'));
     }
 }
