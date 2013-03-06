@@ -19,7 +19,7 @@ Installation
            // ...
            "require": {
                // ...
-               "misd/linkify-bundle": "1.0.*"
+               "misd/linkify-bundle": "~1.0"
            }
         }
 
