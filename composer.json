@@ -15,9 +15,9 @@
         "issues":"https://github.com/misd-service-development/linkify-bundle/issues"
     },
     "require":{
-        "php":">=5.3.2",
-        "symfony/framework-bundle":">=2.0,<2.2-dev",
-        "misd/linkify":"1.1.*"
+        "php":">=5.3.3",
+        "symfony/framework-bundle":"~2.1",
+        "misd/linkify":"~1.0"
     },
     "suggest":{
         "symfony/twig-bundle":"to use the Twig linkify filter"
