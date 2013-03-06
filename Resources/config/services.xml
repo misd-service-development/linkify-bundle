@@ -7,6 +7,7 @@
     <parameters>
         <parameter key="misd.linkify.class">Misd\Linkify\Linkify</parameter>
         <parameter key="templating.helper.linkify.class">Misd\LinkifyBundle\Helper\LinkifyHelper</parameter>
+        <parameter key="twig.extension.linkify.class">Misd\LinkifyBundle\Twig\Extension\LinkifyTwigExtension</parameter>
     </parameters>
 
     <services>
@@ -15,7 +16,7 @@
             <tag name="templating.helper" alias="linkify"/>
             <argument type="service" id="misd.linkify"/>
         </service>
-        <service id="twig.extension.linkify" class="Misd\LinkifyBundle\Twig\Extension\LinkifyTwigExtension" public="false">
+        <service id="twig.extension.linkify" class="%twig.extension.linkify.class%" public="false">
             <tag name="twig.extension"/>
             <argument type="service" id="templating.helper.linkify"/>
         </service>
