@@ -18,11 +18,11 @@ Installation
         // composer.json
 
         {
-           // ...
-           "require": {
-               // ...
-               "misd/linkify-bundle": "~1.0"
-           }
+            // ...
+            "require": {
+                // ...
+                "misd/linkify-bundle": "~1.0"
+            }
         }
 
  2. Use Composer to download and install LinkifyBundle:
@@ -52,12 +52,12 @@ Usage
 
 Use the service:
 
-        $text = $this->container->get('misd.linkify')->process('This is my text containing a link to www.example.com.');
+    $text = $this->container->get('misd.linkify')->process('This is my text containing a link to www.example.com.');
 
 In a Twig template:
 
-        {{ "This is my text containing a link to www.example.com."|linkify }}
+    {{ "This is my text containing a link to www.example.com."|linkify }}
 
 In a PHP template:
 
-        <?php echo $view['linkify']->process('This is my text containing a link to www.example.com.') ?>
+    <?php echo $view['linkify']->process('This is my text containing a link to www.example.com.') ?>
