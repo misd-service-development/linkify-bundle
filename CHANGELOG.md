@@ -1,6 +1,13 @@
 Changelog
 =========
 
+1.0.4
+-----
+
+2 April 2013.
+
+* Allow options to be passed to Linkify (requires Linkify v1.1.1 or newer).
+
 1.0.3
 -----
 
