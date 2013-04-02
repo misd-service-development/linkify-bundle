@@ -42,13 +42,16 @@ class LinkifyTwigExtensionTest extends AbstractTestCase
 
     public function testLinkify()
     {
+        $text = 'test';
+        $options = array('key' => 'value');
+
         $linkify = $this->getMock('Misd\Linkify\Linkify');
         $helper = $this->getMock('Misd\LinkifyBundle\Helper\LinkifyHelper', array('process'), array($linkify));
-        $helper->expects($this->once())->method('process');
+        $helper->expects($this->once())->method('process')->with($text, $options);
 
         $extension = new LinkifyTwigExtension($helper);
 
-        $extension->linkify('test');
+        $extension->linkify($text, $options);
     }
 
     public function testName()

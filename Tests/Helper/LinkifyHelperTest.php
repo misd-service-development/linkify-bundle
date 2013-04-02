@@ -48,11 +48,14 @@ class LinkifyHelperTest extends AbstractTestCase
 
     public function testProcess()
     {
+        $text = 'test';
+        $options = array('key' => 'value');
+
         $linkify = $this->getMock('Misd\Linkify\Linkify');
-        $linkify->expects($this->once())->method('process');
+        $linkify->expects($this->once())->method('process')->with($text, $options);
 
         $helper = new LinkifyHelper($linkify);
 
-        $helper->process('test');
+        $helper->process($text, $options);
     }
 }

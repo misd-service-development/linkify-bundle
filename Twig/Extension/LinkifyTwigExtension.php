@@ -52,13 +52,14 @@ class LinkifyTwigExtension extends Twig_Extension
     /**
      * Linkify text.
      *
-     * @param string $text Text to process.
+     * @param string $text    Text to process.
+     * @param array  $options Options.
      *
      * @return string Processed text.
      */
-    public function linkify($text)
+    public function linkify($text, array $options = array())
     {
-        return $this->helper->process($text);
+        return $this->helper->process($text, $options);
     }
 
     /**

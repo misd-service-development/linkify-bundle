@@ -61,3 +61,21 @@ In a Twig template:
 In a PHP template:
 
     <?php echo $view['linkify']->process('This is my text containing a link to www.example.com.') ?>
+
+### Options
+
+*Requires Linkify v1.1.1 or newer.*
+
+An array of options can be passed (see the Linkify docs for futher details). So to add the `link` class to created links:
+
+Using the service:
+
+    $text = $this->container->get('misd.linkify')->process('This is my text containing a link to www.example.com.', array('attr' => array('class' => 'link')));
+
+In a Twig template:
+
+    {{ "This is my text containing a link to www.example.com."|linkify({'attr': {'class': 'link'}}) }}
+
+In a PHP template:
+
+    <?php echo $view['linkify']->process('This is my text containing a link to www.example.com.', array('attr' => array('class' => 'link'))) ?>

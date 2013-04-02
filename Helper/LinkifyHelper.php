@@ -72,12 +72,13 @@ class LinkifyHelper implements HelperInterface
     /**
      * Process text.
      *
-     * @param string $text Text to process.
+     * @param string $text    Text to process.
+     * @param array  $options Options.
      *
      * @return string Processed text.
      */
-    public function process($text)
+    public function process($text, array $options = array())
     {
-        return $this->linkify->process($text);
+        return $this->linkify->process($text, $options);
     }
 }
