@@ -1,34 +1,34 @@
 {
-    "name":"misd/linkify-bundle",
-    "type":"symfony-bundle",
-    "description":"Converts URLs and email addresses in text into HTML links",
-    "keywords":["url", "email address", "convert", "link", "bundle"],
-    "homepage":"https://github.com/misd-service-development/linkify-bundle",
-    "license":"MIT",
-    "authors":[
+    "name": "misd/linkify-bundle",
+    "type": "symfony-bundle",
+    "description": "Converts URLs and email addresses in text into HTML links",
+    "keywords": ["url", "email address", "convert", "link", "bundle"],
+    "homepage": "https://github.com/misd-service-development/linkify-bundle",
+    "license": "MIT",
+    "authors": [
         {
-            "name":"Chris Wilkinson",
-            "email":"chris.wilkinson@admin.cam.ac.uk"
+            "name": "Chris Wilkinson",
+            "email": "chris.wilkinson@admin.cam.ac.uk"
         }
     ],
-    "support":{
-        "issues":"https://github.com/misd-service-development/linkify-bundle/issues"
+    "support": {
+        "issues": "https://github.com/misd-service-development/linkify-bundle/issues"
     },
-    "require":{
-        "php":">=5.3.3",
-        "symfony/framework-bundle":"~2.1",
-        "misd/linkify":"~1.0"
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/framework-bundle": "~2.1",
+        "misd/linkify": "~1.0"
     },
-    "require-dev":{
-        "symfony/twig-bundle":"~2.1"
+    "require-dev": {
+        "symfony/twig-bundle": "~2.1"
     },
-    "suggest":{
-        "symfony/twig-bundle":"to use the Twig linkify filter"
+    "suggest": {
+        "symfony/twig-bundle": "to use the Twig linkify filter"
     },
-    "autoload":{
-        "psr-0":{
-            "Misd\\LinkifyBundle":""
+    "autoload": {
+        "psr-0": {
+            "Misd\\LinkifyBundle": ""
         }
     },
-    "target-dir":"Misd/LinkifyBundle"
+    "target-dir": "Misd/LinkifyBundle"
 }
