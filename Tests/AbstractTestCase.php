@@ -13,9 +13,9 @@ namespace Misd\LinkifyBundle\Tests;
 
 use Misd\LinkifyBundle\MisdLinkifyBundle;
 use PHPUnit_Framework_TestCase;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Compiler\ResolveDefinitionTemplatesPass;
 use Symfony\Component\DependencyInjection\Compiler\ResolveParameterPlaceHoldersPass;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\KernelInterface;
 
 class AbstractTestCase extends PHPUnit_Framework_TestCase

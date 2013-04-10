@@ -11,7 +11,8 @@
 
 namespace Misd\LinkifyBundle\Twig\Extension;
 
-use Twig_Extension, Twig_Filter_Method;
+use Twig_Extension;
+use Twig_Filter_Method;
 use Misd\LinkifyBundle\Helper\LinkifyHelper;
 
 /**
