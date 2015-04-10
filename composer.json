@@ -26,11 +26,10 @@
         "symfony/twig-bundle": "to use the Twig linkify filter"
     },
     "autoload": {
-        "psr-0": {
-            "Misd\\LinkifyBundle": ""
+        "psr-4": {
+            "Misd\\LinkifyBundle\\": ""
         }
     },
-    "target-dir": "Misd/LinkifyBundle",
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"
