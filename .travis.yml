@@ -20,4 +20,4 @@ before_script:
   - composer require misd/linkify:${LINKIFY_VERSION} --no-update
   - composer install --dev --prefer-source
 
-script: phpunit --coverage-text
+script: ./vendor/bin/phpunit --coverage-text
