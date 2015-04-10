@@ -13,7 +13,7 @@ Changelog
 
 6 March 2013.
 
-* Add Symfony 2.2 compatability.
+* Add Symfony 2.2 compatibility.
 
 1.0.2
 -----
