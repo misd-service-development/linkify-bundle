@@ -16,12 +16,12 @@
     },
     "require": {
         "php": ">=5.3.3",
-        "symfony/framework-bundle": "~2.1",
+        "symfony/framework-bundle": "^2.3 || ^3.0",
         "misd/linkify": "~1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.0",
-        "symfony/twig-bundle": "~2.1"
+        "symfony/twig-bundle": "^2.3.24 || ^3.0"
     },
     "conflict": {
         "phpunit/phpunit-mock-objects": "<2.2"
