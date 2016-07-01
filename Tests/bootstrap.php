@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Symfony2 LinkifyBundle.
+ * This file is part of the Symfony LinkifyBundle.
  *
  * (c) University of Cambridge
  *

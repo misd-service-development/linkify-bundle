@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Symfony2 LinkifyBundle.
+ * This file is part of the Symfony LinkifyBundle.
  *
  * (c) University of Cambridge
  *
@@ -17,8 +17,6 @@ use Misd\LinkifyBundle\Helper\LinkifyHelper;
 
 /**
  * LinkifyTwigExtension
- *
- * @author Chris Wilkinson <chris.wilkinson@admin.cam.ac.uk>
  */
 class LinkifyTwigExtension extends Twig_Extension
 {

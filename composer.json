@@ -11,12 +11,6 @@
     ],
     "homepage": "https://github.com/misd-service-development/linkify-bundle",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Chris Wilkinson",
-            "email": "chris.wilkinson@admin.cam.ac.uk"
-        }
-    ],
     "support": {
         "issues": "https://github.com/misd-service-development/linkify-bundle/issues"
     },

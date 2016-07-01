@@ -1,35 +1,18 @@
 LinkifyBundle
 =============
 
-[![Build Status](https://travis-ci.org/misd-service-development/linkify-bundle.png?branch=master)](https://travis-ci.org/misd-service-development/linkify-bundle)
+[![Build Status](https://travis-ci.org/misd-service-development/linkify-bundle.svg?branch=master)](https://travis-ci.org/misd-service-development/linkify-bundle)
 
-Adds [Linkify](https://github.com/misd-service-development/php-linkify) to your Symfony2 application, which converts URLs and email addresses in HTML (or plain text) to HTML links.
-
-Authors
--------
-
-* Chris Wilkinson <chris.wilkinson@admin.cam.ac.uk>
+Adds [Linkify](https://github.com/misd-service-development/php-linkify) to your Symfony application, which converts URLs and email addresses in HTML (or plain text) to HTML links.
 
 Installation
 ------------
 
- 1. Add LinkifyBundle to your dependencies:
+ 1. Add the LinkifyBundle to your dependencies:
 
-        // composer.json
+        $ composer require misd/linkify-bundle
 
-        {
-            // ...
-            "require": {
-                // ...
-                "misd/linkify-bundle": "~1.0"
-            }
-        }
-
- 2. Use Composer to download and install LinkifyBundle:
-
-        $ php composer.phar update misd/linkify-bundle
-
- 3. Register the bundle in your application:
+ 2. Register the bundle in your application:
 
         // app/AppKernel.php
 

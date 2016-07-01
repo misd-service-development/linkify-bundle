@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Symfony2 LinkifyBundle.
+ * This file is part of the Symfony LinkifyBundle.
  *
  * (c) University of Cambridge
  *
@@ -15,8 +15,6 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
  * MisdLinkifyBundle.
- *
- * @author Chris Wilkinson <chris.wilkinson@admin.cam.ac.uk>
  */
 class MisdLinkifyBundle extends Bundle
 {
