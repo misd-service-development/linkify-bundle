@@ -2,7 +2,13 @@
     "name": "misd/linkify-bundle",
     "type": "symfony-bundle",
     "description": "Converts URLs and email addresses in text into HTML links",
-    "keywords": ["url", "email address", "convert", "link", "bundle"],
+    "keywords": [
+        "url",
+        "email address",
+        "convert",
+        "link",
+        "bundle"
+    ],
     "homepage": "https://github.com/misd-service-development/linkify-bundle",
     "license": "MIT",
     "authors": [
@@ -22,6 +28,9 @@
     "require-dev": {
         "phpunit/phpunit": "~4.0",
         "symfony/twig-bundle": "~2.1"
+    },
+    "conflict": {
+        "phpunit/phpunit-mock-objects": "<2.2"
     },
     "suggest": {
         "symfony/twig-bundle": "to use the Twig linkify filter"
