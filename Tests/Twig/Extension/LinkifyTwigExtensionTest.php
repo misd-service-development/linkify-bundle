@@ -36,8 +36,12 @@ class LinkifyTwigExtensionTest extends AbstractTestCase
 
         $filters = $extension->getFilters();
 
-        $this->assertArrayHasKey('linkify', $filters);
-        $this->assertInstanceOf('Twig_Filter_Method', $filters['linkify']);
+        
+        $linkifyFilters = array_filter($filters, function (\Twig_SimpleFilter $filter) {
+            return $filter->getName() === 'linkify';
+        });
+
+        $this->assertCount(1, $linkifyFilters);
     }
 
     public function testLinkify()
