@@ -23,7 +23,7 @@ class AbstractTestCase extends PHPUnit_Framework_TestCase
     protected function getContainer(array $config = array(), KernelInterface $kernel = null)
     {
         if (null === $kernel) {
-            $kernel = $this->getMock('Symfony\Component\HttpKernel\KernelInterface');
+            $kernel = $this->getMockBuilder('Symfony\Component\HttpKernel\KernelInterface')->getMock();
             $kernel
                 ->expects($this->any())
                 ->method('getBundles')

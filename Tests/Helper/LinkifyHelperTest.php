@@ -18,7 +18,7 @@ class LinkifyHelperTest extends AbstractTestCase
 {
     public function testConstructor()
     {
-        $linkify = $this->getMock('Misd\Linkify\Linkify');
+        $linkify = $this->getMockBuilder('Misd\Linkify\Linkify')->getMock();
 
         $helper = new LinkifyHelper($linkify);
 
@@ -28,7 +28,7 @@ class LinkifyHelperTest extends AbstractTestCase
 
     public function testCharset()
     {
-        $linkify = $this->getMock('Misd\Linkify\Linkify');
+        $linkify = $this->getMockBuilder('Misd\Linkify\Linkify')->getMock();
 
         $helper = new LinkifyHelper($linkify);
 
@@ -39,7 +39,7 @@ class LinkifyHelperTest extends AbstractTestCase
 
     public function testName()
     {
-        $linkify = $this->getMock('Misd\Linkify\Linkify');
+        $linkify = $this->getMockBuilder('Misd\Linkify\Linkify')->getMock();
 
         $helper = new LinkifyHelper($linkify);
 
@@ -51,7 +51,7 @@ class LinkifyHelperTest extends AbstractTestCase
         $text = 'test';
         $options = array('key' => 'value');
 
-        $linkify = $this->getMock('Misd\Linkify\Linkify');
+        $linkify = $this->getMockBuilder('Misd\Linkify\Linkify')->getMock();
         $linkify->expects($this->once())->method('process')->with($text, $options);
 
         $helper = new LinkifyHelper($linkify);
