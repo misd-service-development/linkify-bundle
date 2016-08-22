@@ -1,6 +1,13 @@
 Changelog
 =========
 
+1.0.5
+-----
+
+22 August 2016.
+
+* Add Symfony 3.0 compatibility.
+
 1.0.4
 -----
 
