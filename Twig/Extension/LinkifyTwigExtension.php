@@ -12,7 +12,7 @@
 namespace Misd\LinkifyBundle\Twig\Extension;
 
 use Twig_Extension;
-use Twig_Filter_Method;
+use Twig_SimpleFilter;
 use Misd\LinkifyBundle\Helper\LinkifyHelper;
 
 /**
@@ -41,7 +41,7 @@ class LinkifyTwigExtension extends Twig_Extension
     public function getFilters()
     {
         return array(
-            'linkify' => new Twig_Filter_Method($this, 'linkify', array(
+            new Twig_SimpleFilter('linkify', array($this, 'linkify'), array(
                 'pre_escape' => 'html',
                 'is_safe' => array('html')
             )),
