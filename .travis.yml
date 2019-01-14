@@ -2,27 +2,40 @@ language: php
 
 sudo: false
 
+env:
+  global:
+    - SYMFONY_VERSION=""
+
 php:
-  - 5.3
   - 5.4
   - 5.5
   - 5.6
   - 7.0
+  - 7.1
   - hhvm
 
 matrix:
-    allow_failures:
-        - php: hhvm
-    fast_finish: true
-    include:
-        - php: 5.3
-          env: dependencies=lowest
+  allow_failures:
+     - php: hhvm
+  fast_finish: true
+  include:
+    - php: 5.3
+      env: SYMFONY_VERSION="2.1.*"
+      dist: precise
+    - php: 5.5
+      env: SYMFONY_VERSION="3.0.*"
+    - php: 7.1
+      env: SYMFONY_VERSION="4.0.*"
 
 cache:
-    directories:
-      - $HOME/.composer/cache/files
+  directories:
+    - $HOME/.composer/cache/files
 
-install:
-  - if [ "$dependencies" = "lowest" ]; then composer update --prefer-lowest --no-interaction; else composer install --no-interaction; fi;
+before_install:
+  - phpenv config-rm xdebug.ini
+  - echo "memory_limit=-1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
+  - if [ "$SYMFONY_VERSION" != "" ]; then composer require --dev --no-update symfony/symfony:$SYMFONY_VERSION; fi
+
+install: composer update --prefer-lowest --no-interaction
 
 script: ./vendor/bin/phpunit --coverage-text
