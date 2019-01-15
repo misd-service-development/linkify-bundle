@@ -13,6 +13,7 @@ namespace Misd\LinkifyBundle\Tests;
 
 use Misd\LinkifyBundle\MisdLinkifyBundle;
 use PHPUnit_Framework_TestCase;
+use Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass;
 use Symfony\Component\DependencyInjection\Compiler\ResolveDefinitionTemplatesPass;
 use Symfony\Component\DependencyInjection\Compiler\ResolveParameterPlaceHoldersPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -44,7 +45,12 @@ class AbstractTestCase extends PHPUnit_Framework_TestCase
         $bundle->build($container);
 
         $container->getCompilerPassConfig()->setOptimizationPasses(
-            array(new ResolveParameterPlaceHoldersPass(), new ResolveDefinitionTemplatesPass())
+            array(
+                new ResolveParameterPlaceHoldersPass(),
+                class_exists('Symfony\Component\DependencyInjection\Compiler\ResolveDefinitionTemplatesPass')
+                    ? new ResolveDefinitionTemplatesPass()
+                    : new ResolveChildDefinitionsPass()
+            )
         );
         $container->getCompilerPassConfig()->setRemovingPasses(array());
         $container->compile();
